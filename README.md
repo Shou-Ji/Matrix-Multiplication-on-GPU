@@ -1,6 +1,5 @@
 # CUDA-GPU-Parallel-Computing
 Measuring the performance of matrix multiplication both with- and without a GPU.
-URL: https://incredible-vulture-c9a.notion.site/CUDA-GPU-Parallel-Computing-8e328c93a75a41bab300f19efbc3ebaa
 
 # Environment
 
@@ -90,18 +89,18 @@ pip install -r requirements.txt
 
 # 2. Library Dependency
 
-This section does not need to be performed for [installation](https://www.notion.so/CUDA-GPU-Parallel-Computing-8e328c93a75a41bab300f19efbc3ebaa).
+This section does not need to be performed for installation.
 
 ## 2.1. Windows
 
-Perform the [prepare virtualenv](https://www.notion.so/CUDA-GPU-Parallel-Computing-8e328c93a75a41bab300f19efbc3ebaa).
+Perform the **1.1.1. prepare virtualenv** section.
 
 ### 2.1.1. PyTorch + CUDA GPU
 
 Install PyTorch GPU with python wheel package.
 
 ```bash
-pip install torch==1.8.0+cu111 -f [https://download.pytorch.org/whl/cu111/torch_stable.html](https://download.pytorch.org/whl/cu111/torch_stable.html)
+pip install torch==1.8.0+cu111 -f https://download.pytorch.org/whl/cu111/torch_stable.html
 ```
 
 - Validation

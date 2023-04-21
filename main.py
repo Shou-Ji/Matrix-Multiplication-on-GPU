@@ -33,24 +33,25 @@ def main():
 
 
     # Result
-    print(f"{'MultiplyCuda = ':<20} {ResultCuda}")
-    print(f"{'MultiplyNumpy = ':<20} {ResultNumpy}\n")
+    print(f"{'MultiplyCuda = ':<18} {ResultCuda}")
+    print(f"{'MultiplyNumpy = ':<18} {ResultNumpy}\n")
 
-    print(f"{'':<10}{'MultiplyCuda':<25}MultiplyNumpy")
-    print(f"{'RunTime':<10}{str(RunTimeOfMultiplyCuda):<25}{RunTimeOfMultiplyNumpy}")
+    print(f"{'':<20}{'With GPU':<15}Without GPU")
+    print(f"{'RunTime (second):':<20}{str(RunTimeOfMultiplyCuda.__round__(7)):<15}{RunTimeOfMultiplyNumpy.__round__(7)}")
 
 
     # Release
     ResultCuda = ResultCuda.to('cpu')
 
 
-main()
+if __name__ == '__main__':
+    main()
 
 # Output :
 #   cuda 
-#   
-#   MultiplyCuda =       tensor([6., 6., 6.,  ..., 6., 6., 6.], device='cuda:0')
-#   MultiplyNumpy =      [6. 6. 6. ... 6. 6. 6.]
-#   
-#             MultiplyCuda             MultiplyNumpy
-#   RunTime   0.0029516999999996685    0.15093200000000007
+#
+#   MultiplyCuda =     tensor([6., 6., 6.,  ..., 6., 6., 6.], device='cuda:0')
+#   MultiplyNumpy =    [6. 6. 6. ... 6. 6. 6.]
+#
+#                       With GPU       Without GPU
+#   RunTime (second):   0.0031947      0.1176511
