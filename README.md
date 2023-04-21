@@ -4,10 +4,15 @@ Measuring the performance of matrix multiplication both with- and without a GPU.
 # Environment
 
 Python : 3.8
+
 GPU : NVIDIA GeForce GTX 1070
+
 CUDA Driver : Release 12.1, V12.1.66
+
 CUDA : 11.1
+
 PyTorch : 1.8.0+cu111
+
 NumPy : 1.24.2
 
 # 1. Installation
