@@ -1,5 +1,6 @@
 # CUDA-GPU-Parallel-Computing
 Measuring the performance of matrix multiplication both with- and without a GPU.
+URL: https://incredible-vulture-c9a.notion.site/CUDA-GPU-Parallel-Computing-8e328c93a75a41bab300f19efbc3ebaa
 
 # Environment
 
@@ -17,7 +18,7 @@ NumPy : 1.24.2
 
 # 1. Installation
 
-`git clone [https://github.com/SongHaoHuang/CUDA-GPU-Parallel-Computing.git](https://github.com/SongHaoHuang/CUDA-GPU-Parallel-Computing.git)`
+`git clone https://github.com/SongHaoHuang/CUDA-GPU-Parallel-Computing.git`
 
 ## 1.1. Windows
 
