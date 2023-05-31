@@ -23,7 +23,7 @@ CUDA Driver : Release 12.1, V12.1.66
 
 # 1. Installation
 
-`git clone https://github.com/SongHaoHuang/CUDA-GPU-Parallel-Computing.git`
+`git clone https://github.com/SongHaoHuang/Matrix-Multiplication-on-GPU.git`
 
 ## 1.1. Windows
 
