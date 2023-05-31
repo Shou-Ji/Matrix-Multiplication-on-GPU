@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# exclude everything in the folder
+material/*
+
 # C extensions
 *.so
 
