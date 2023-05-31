@@ -10,9 +10,9 @@ def MultiplyNumpy(a, b):
     return c
 def Warmup(Device):
     cuda_zeros = torch.zeros(1).to(Device)
-    non_cuda_zeros = np.zeros(1)
+    cpu_zeros = np.zeros(1)
     Multiply(cuda_zeros, cuda_zeros.T)
-    Multiply(non_cuda_zeros, non_cuda_zeros.T)
+    Multiply(cpu_zeros, cpu_zeros.T)
     cuda_zeros.to('cpu')
 
 def main():
@@ -23,8 +23,8 @@ def main():
     NumberOfElements = 64000000
     A_cuda = (torch.ones(NumberOfElements, dtype = torch.float32) * 2).to(Device)
     B_cuda = (torch.ones(NumberOfElements, dtype = torch.float32) * 3).to(Device)
-    A_non_cuda = np.ones(NumberOfElements, np.float32) * 2
-    B_non_cuda = np.ones(NumberOfElements, np.float32) * 3
+    A_cpu = np.ones(NumberOfElements, np.float32) * 2
+    B_cpu = np.ones(NumberOfElements, np.float32) * 3
 
     Warmup(Device)
 
@@ -35,15 +35,15 @@ def main():
     ExecutionTimeOfMultiply = timer() - Start
     
     Start = timer()
-    ResultNumpy = Multiply(A_non_cuda, B_non_cuda.T)
-    ExecutionTimeOfMultiplyNumpy = timer() - Start
+    ResultCpu = Multiply(A_cpu, B_cpu.T)
+    ExecutionTimeOfMultiplyCpu = timer() - Start
 
 
     # Result
     print(f"{'':<27}{'With GPU':<13}Without GPU")
-    print(f"{'Execution Time (second):':<27}{str(ExecutionTimeOfMultiply.__round__(7)):<13}{ExecutionTimeOfMultiplyNumpy.__round__(7)}")
+    print(f"{'Execution Time (second):':<27}{str(ExecutionTimeOfMultiply.__round__(7)):<13}{ExecutionTimeOfMultiplyCpu.__round__(7)}")
     #print(f"{'Multiply = ':<18} {ResultCuda}")
-    #print(f"{'MultiplyNumpy = ':<18} {ResultNumpy}\n")
+    #print(f"{'MultiplyCpu = ':<18} {ResultCpu}\n")
 
 
     # Release
