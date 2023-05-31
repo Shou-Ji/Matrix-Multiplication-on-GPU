@@ -1,19 +1,25 @@
 # CUDA-GPU-Parallel-Computing
-Measuring the performance of matrix multiplication both with- and without a GPU.
+Measuring the execution time of matrix multiplication with and without a GPU.
+
+![matrix multiplication](https://github.com/SongHaoHuang/Matrix-Multiplication-on-GPU/assets/128410674/b6095217-4432-461c-8201-c1ac2f0e5a19)
+
+![output](https://github.com/SongHaoHuang/Matrix-Multiplication-on-GPU/assets/128410674/1f14e600-2833-42b6-9ad5-13a4b393990a)
+
+Note that a `Warmup` prior to measurements is performed to exclude one-time start-up costs.
 
 # Environment
+GPU : NVIDIA GeForce GTX 1070 8G
+
+CPU : Intel(R) Xeon(R) CPU E3-1230 v3 @ 3.30GHz
+
 
 Python : 3.8
 
-GPU : NVIDIA GeForce GTX 1070
-
-CUDA Driver : Release 12.1, V12.1.66
-
-CUDA : 11.1
-
-PyTorch : 1.8.0+cu111
+PyTorch : 1.8.0+cu111 (CUDA : 11.1)
 
 NumPy : 1.24.2
+
+CUDA Driver : Release 12.1, V12.1.66
 
 # 1. Installation
 
